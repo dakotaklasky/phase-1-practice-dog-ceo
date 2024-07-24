@@ -37,11 +37,11 @@ fetch(breedUrl)
 //when the letter is selected in the toggle, use that letter to filter the ul 
 const myList = document.getElementsByTagName('li')
 const filterElement = document.getElementById('breed-dropdown')
-const filterVal = filterElement.value
 
-filterVal.addEventListener('change', () => {
+
+filterElement.addEventListener('change', () => {
 for (i=0; i<myList.length; i++){
-    if (myList[i].textContent[i] === filterVal){
+    if (myList[i].textContent[0] === filterElement.value){
         myList[i].style.display = ""
     }
     else{
